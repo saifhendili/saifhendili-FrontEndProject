@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+
+<div class="addFournisseur row">
+ 
+</div>
+<section class="lesFournisseur" *ngIf="!show" >
+<div *ngFor="let i of fournisseurs; let position=index">
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{i.codeFournisseur}}</h5>
+         
+          <p class="card-text">{{i.libelleFournisseur}}</p>
+          <button [routerLink]="['/home/listFournisseur/',i.idFournisseur]" class="btn btn-primary">Visite</button> 
+          <button  class="btn btn-secondary" (click)="editFournisseur(i)">Edit</button> 
+          <button class="btn btn-danger" (click)="DeleteBtn(i,position)">Delete</button>
+    
+        </div>
+      </div>
+
+
+</div>
+</section> 
+<app-categorie-fournisseur></app-categorie-fournisseur>
+<div class="btnplace" >
+<button class="btn btn-primary " (click)="showForm()">Add</button>
+<app-form-fournisseur (aded)="addFournisseur($event)" *ngIf="showAdd"></app-form-fournisseur>
+<app-fournisseur-pie-charts></app-fournisseur-pie-charts>
+</div>
+ 

@@ -1,0 +1,19 @@
+
+
+<form class="" [formGroup]="myForm" (submit)="add()">
+    <div class="form-group">
+        <label>Code Fournisseur</label>
+        <input type="text" 
+        class="form-control" formControlName="codeFournisseur"> 
+    </div>
+    <div class="form-group">
+        <h1>Vous Devez Creer votre ville puis "," puis votre libellé </h1>
+        <label>Libellé Fournisseur</label>
+        <input type="text" 
+        class="form-control" formControlName="libelleFournisseur">
+    </div> 
+  
+   
+      
+    <input type="submit" class="btn btn-primary" value="Ajouter Fournisseur">       
+</form>

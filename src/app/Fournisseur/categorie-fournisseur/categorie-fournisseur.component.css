@@ -1,0 +1,19 @@
+.lesFournisseur{
+   position: absolute;
+    margin-left:35% ;  
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+ 
+}
+.filter{
+    
+    position: absolute;
+  
+    margin-left: 20%;
+    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+
+
+}

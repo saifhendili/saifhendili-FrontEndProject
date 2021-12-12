@@ -1,0 +1,19 @@
+<div class="perso">
+
+<p> Code Fournisseur : {{fournisseur.codeFournisseur}}</p>
+<p>Libellé Fournisseur : {{fournisseur.libelleFournisseur}}</p>
+<Button class="btn btn-primary" (click)="getnbProduit()">Nombre du Produit dans le marché</Button> <span [(ngModel)]="nbProduit" name="firstname">==> {{nbProduit}}</span>
+<app-fournisseur-chart ></app-fournisseur-chart>
+<button (click)="toggleMap()" class="btn btn-primary" [(ngModel)]="TextBtn">{{TextBtn}}</button>
+<span *ngIf="showmap">
+<iframe
+  width="600"
+  height="450"
+  style="border:0;width:100%;"
+ margin="10px 70px"
+  loading="lazy"
+  allowfullscreen
+  [src]="link">
+</iframe>
+</span>
+</div>
